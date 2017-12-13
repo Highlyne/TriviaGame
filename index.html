@@ -29,10 +29,14 @@
            </div>
         </div>
            <div class="row">
-           <div class="col-sm-12">
-               <h3>Answer</h3>
-               <div id="answers"></div>
+                <div class="col-sm-12">
+                    <div class="checkbox">
+                            <label class="checkbox-inline"><input type="checkbox" value="">Option 1</label>
+                            <label class="checkbox-inline"><input type="checkbox" value="">Option 2</label>
+                            <label class="checkbox-inline"><input type="checkbox" value="">Option 3</label>
+                          </div>
             </div>
+           </div>
         </div>
         </div>
         </div>
@@ -41,13 +45,13 @@
         <div id="rightcolumn">
             <h3>Time Clock</h3>
             <p id="timeclock">30</p>
-            <h3>Seconds</h3>
+            <h3>Seconds</h3><br>
+            <div class="btn-group" role="group" aria-label="...">
+                    <button type="button" id="resume">start game</button>
+                    <button type="button" id="stop">reset game</button>
+                  </div>
         </div>
         </div>
-        <div class="btn-group" role="group" aria-label="...">
-                <button type="button" id="resume">start game</button>
-                <button type="button" id="stop">reset game</button>
-              </div>
     </div>
     <script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>
