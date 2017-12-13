@@ -14,9 +14,10 @@ p {
 }
 
 #headerwrap {
-    width: 1000px;
+    width: 850px;
     float: left;
     margin: 0 auto;
+    clear: both;
 }
 
 #header {
@@ -28,7 +29,7 @@ p {
 }
 
 #contentwrap {
-    width: 850px;
+    width: 995px;
     float: left;
     margin: 0 auto;
 }
@@ -41,7 +42,7 @@ p {
 }
 
 #rightcolumnwrap {
-    width: 150px;
+    width: 145px;
     float: left;
     margin: 0 auto;
 }
