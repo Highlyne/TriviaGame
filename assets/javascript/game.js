@@ -10,28 +10,22 @@ c2:"here is the correct answer"}]
     
     
     var number = 30;
-    
-        //  Variable that will hold our interval ID when we execute
-        //  the "run" function
+        //  Variable that will hold our interval ID when the run function is executed
         var intervalId;
-    
-        //  When the stop button gets clicked, run the stop function.
+
         $("#stop").on("click", stop);
-    
-        //  When the resume button gets clicked, execute the run function.
         $("#resume").on("click", run);
     
-        //  The run function sets an interval
-        //  that runs the decrement function once a second.
+        //  The run function sets an interval that runs a decrement function every second
         function run() {
           intervalId = setInterval(decrement, 1000);
-          $("#questions").data("Hello World" + questions[0].q1);
+          document.querySelector('#questions').innerHTML = "Wins: " + questions[0].q1;
           console.log("lookig for questions");
         }
         function decrement() {
           number--;
     
-          //  Show the number in the #show-number tag.
+          //  Show the countdow of the timer created by the run function
           $("#timeclock").html("<h2>" + number + "</h2>");
 
           //  Once number hits zero...
@@ -57,11 +51,6 @@ c2:"here is the correct answer"}]
         //  Execute the run function.
         run();
 
-        questions =[{q1:"Here is a questions",
-                    a1:"here is some answer choices",
-                    c1:"here is the correct answer"},
-                {q2:"Here is a questions",
-                a2:"here is some answer choices",
-                c2:"here is the correct answer"}]
+   
 
         
