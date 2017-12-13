@@ -20,6 +20,7 @@ c2:"here is the correct answer"}]
         function run() {
           intervalId = setInterval(decrement, 1000);
           document.querySelector('#questions').innerHTML = "Wins: " + questions[0].q1;
+          document.querySelector('#answers').innerHTML = "Answers: " + questions[0].a1;
           console.log("lookig for questions");
         }
         function decrement() {
