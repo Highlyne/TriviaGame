@@ -1,8 +1,7 @@
 console.log("this is a test");
-    //  Interval Demonstration
-    //  Set our number counter to 100.
+
     questions =[{q1:"Here is a questions",
-    a1:"here is some answer choices",
+    a1:["pick1", "pick2", "pick3", "pick4"],
     c1:"here is the correct answer"},
 {q2:"Here is a questions",
 a2:"here is some answer choices",
@@ -19,8 +18,8 @@ c2:"here is the correct answer"}]
         //  The run function sets an interval that runs a decrement function every second
         function run() {
           intervalId = setInterval(decrement, 1000);
-          document.querySelector('#questions').innerHTML = "Wins: " + questions[0].q1;
-          document.querySelector('#answers').innerHTML = "Answers: " + questions[0].a1;
+          document.querySelector('#questions1a').innerHTML = questions[0].q1;
+          document.querySelector('#anw1').innerHTML = questions[0].a1[0];
           console.log("lookig for questions");
         }
         function decrement() {
