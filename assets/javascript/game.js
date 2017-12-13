@@ -1,13 +1,24 @@
 console.log("this is a test");
 
-    questions =[{q1:"Here is a questions",
-    a1:["pick1", "pick2", "pick3", "pick4"],
-    c1:"here is the correct answer"},
-{q2:"Here is a questions",
-a2:"here is some answer choices",
-c2:"here is the correct answer"}]
+    questions =[{q:"Here is a questions",
+    a:["pick1", "pick2", "pick3", "pick4"],
+    c:"here is the correct answer"},
+{q:"Here is a questions",
+a:"here is some answer choices",
+c:"here is the correct answer"}]
     
     
+    for(var i=0; i<questions.length;i++){
+
+      var wrap = $("<div>")
+
+      var questionName=  $("<h3>").text(questions[i].q);
+         $("#questions").append(questionName);
+
+    }
+
+
+
     var number = 30;
         //  Variable that will hold our interval ID when the run function is executed
         var intervalId;
@@ -20,6 +31,9 @@ c2:"here is the correct answer"}]
           intervalId = setInterval(decrement, 1000);
           document.querySelector('#questions1a').innerHTML = questions[0].q1;
           document.querySelector('#anw1').innerHTML = questions[0].a1[0];
+          document.querySelector('#anw2').innerHTML = questions[0].a1[1];
+          document.querySelector('#anw3').innerHTML = questions[0].a1[2];
+          document.querySelector('#anw4').innerHTML = questions[0].a1[3];
           console.log("lookig for questions");
         }
         function decrement() {

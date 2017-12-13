@@ -32,10 +32,7 @@ p {
     width: 995px;
     float: left;
     margin: 0 auto;
-}
-
-#content {
-    background: #FFFFFF;
+    background: grey;
     border-radius: 10px;
     border: 1px solid #ebebeb;
     margin: 5px;
