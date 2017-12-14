@@ -15,61 +15,64 @@
 
 
 $(document).ready(function(){
-console.log("this is a test");
 
-    questions =[{q:"Who picked a peck of pickled pepper?",
-    a:["pick1", "Peter Piper", "Peter Parker", "pick4"],
-    c:"here is the correct answer"},
+  
+  $("#game-content").hide();
+  console.log("this is a test");
+  
+})
+    // questions =[{q:"Who picked a peck of pickled pepper?",
+    // a:["pick1", "Peter Piper", "Peter Parker", "pick4"],
+    // c:"here is the correct answer"},
 
-    {q:"What colors are dandelions?",
-    a:["White", "Brown", "Pink", "Yellow"],
-    c:"White"},
+    // {q:"What colors are dandelions?",
+    // a:["White", "Brown", "Pink", "Yellow"],
+    // c:"White"},
 
-    {q:"How many holes are there on a standard golf course?",
-    a:["13", "20", "16", "18"],
-    c:"18"}];
+    // {q:"How many holes are there on a standard golf course?",
+    // a:["13", "20", "16", "18"],
+    // c:"18"}];
     
     
-    for(var i=0; i<questions.length;i++){
+    // for(var i=0; i<questions.length;i++){
 
-      var wrap = $("<div>")
+    //   var wrap = $("<div>")
 
-      var questionName=  $("<h3>").text(questions[i].q);
-         $("#questions").append(questionName);
+    //   var questionName=  $("<h3>").text(questions[i].q);
+    //      $("#questions").append(questionName);
 
-    }
-    function stop() {
-      clearInterval(intervalId);
-    }
+    // }
+    // function stop() {
+    //   clearInterval(intervalId);
+    // }
 
 
-    var number = 30;
-        //  Variable that will hold our interval ID when the run function is executed
-        var intervalId;
+    // var number = 30;
+    //     //  Variable that will hold our interval ID when the run function is executed
+    //     var intervalId;
 
-        $("#stop").on("click", stop);
-        $("#start").on("click", run);
+    //     $("#stop").on("click", stop);
+    //     $("#start").on("click", run);
     
-        //  The run function sets an interval that runs a decrement function every second
-        function run() {
-          timer();
-          document.querySelector('#questions1').innerHTML = questions[0].q;
-          document.querySelector('#anw1').innerHTML = questions[0].a[0];
-          document.querySelector('#anw2').innerHTML = questions[0].a[1];
-          document.querySelector('#anw3').innerHTML = questions[0].a[2];
-          document.querySelector('#anw4').innerHTML = questions[0].a[3];
-          console.log("looking for questions");
-        }
+    //     //  The run function sets an interval that runs a decrement function every second
+    //     function run() {
+    //       timer();
+    //       document.querySelector('#questions1').innerHTML = questions[0].q;
+    //       document.querySelector('#anw1').innerHTML = questions[0].a[0];
+    //       document.querySelector('#anw2').innerHTML = questions[0].a[1];
+    //       document.querySelector('#anw3').innerHTML = questions[0].a[2];
+    //       document.querySelector('#anw4').innerHTML = questions[0].a[3];
+    //       console.log("looking for questions");
+    //     }
         
-        function time() {
-          intervalId = setInterval(decrement, 1000);
-        function decrement() {
-          number--;
-        };
-          //  Show the countdow of the timer created by the run function
-          $("#timeclock").html("<h2>" + number + "</h2>");
-          if (number === 0) {
-            stop();
-            alert("Time Up!");
-          }
-        }
+    //     function time() {
+    //       intervalId = setInterval(decrement, 1000);
+    //     function decrement() {
+    //       number--;
+    //     };
+    //       //  Show the countdow of the timer created by the run function
+    //       $("#timeclock").html("<h2>" + number + "</h2>");
+    //       if (number === 0) {
+    //         stop();
+    //         alert("Time Up!");
+    //       }
