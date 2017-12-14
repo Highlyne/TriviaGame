@@ -19,6 +19,14 @@ $(document).ready(function(){
   
   $("#game-content").hide();
   console.log("this is a test");
+
+  $("#start-game-btn").on("click", run);
+  $("#stop").on("click", stop);
+
+  function run() {
+    $("#game-content").show();
+    $("#open-message").hide();
+  }
   
 })
     // questions =[{q:"Who picked a peck of pickled pepper?",
@@ -51,12 +59,11 @@ $(document).ready(function(){
     //     //  Variable that will hold our interval ID when the run function is executed
     //     var intervalId;
 
-    //     $("#stop").on("click", stop);
-    //     $("#start").on("click", run);
+    //    
+    //     
     
     //     //  The run function sets an interval that runs a decrement function every second
-    //     function run() {
-    //       timer();
+    //     
     //       document.querySelector('#questions1').innerHTML = questions[0].q;
     //       document.querySelector('#anw1').innerHTML = questions[0].a[0];
     //       document.querySelector('#anw2').innerHTML = questions[0].a[1];
