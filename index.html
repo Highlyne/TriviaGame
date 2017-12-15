@@ -31,11 +31,6 @@
             <h3>Time Clock</h3>
             <p id="timeclock">30</p>
             <h3>Seconds</h3>
-            <br>
-            <div class="btn-group" role="group" aria-label="...">
-                <button type="button" id="start">start game</button>
-                <button type="button" id="stop">reset game</button>
-            </div>
         </div>
     </div>
 <!--Here is the game content-->
@@ -107,8 +102,15 @@
         </div>
     </div>
     <div id="result-wrapper">
-        <p>I will put some stuff here</p>
-        <div id="result-info"></div>
+        <div class="row">
+            <div class="sm-6">
+        <p>Your Wins =  <div id="wins"></div></p>
+        <p>Your Losses =  <div id="lose"></div></p>
+        <div class="btn-group" role="group" aria-label="...">
+                <button type="button" id="start">start game</button>
+                <button type="button" id="stop">reset game</button>
+            </div>
+            </div>
     </div>
 </div>
     <script type="text/javascript" src="assets/javascript/game.js"></script>

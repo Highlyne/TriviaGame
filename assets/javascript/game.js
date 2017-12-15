@@ -17,6 +17,8 @@
 $(document).ready(function() {
 
 $("#game-content").hide();
+$("#result-wrapper").hide();
+$("#start-game-btn").on("click", run);
 console.log("this is a test");
 
   var questions =["Who picked a peck of pickled pepper?", "What colors are dandelions?", "How many holes are there on a standard golf course?", "test"];
@@ -35,7 +37,7 @@ console.log("this is a test");
   function renderAnswers() {
     for (let w = 0; w < a1.length; w++) {
       const emlement= a1.length;
-    $("#answerboxes").append(a1[w]);
+    $("#answerboxes1").append(a1[w]);
     }}
   
   function showQuestions() {
@@ -46,7 +48,7 @@ console.log("this is a test");
     console.log("test " + questions[1]);
   }  
 
-  $("#start-game-btn").on("click", run);
+
 
   function run() {
     $("#game-content").show();
