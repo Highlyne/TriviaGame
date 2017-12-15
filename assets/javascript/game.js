@@ -14,35 +14,54 @@
 
 
 
-$(document).ready(function(){
+$(document).ready(function() {
 
+$("#game-content").hide();
+console.log("this is a test");
+
+  var questions =["Who picked a peck of pickled pepper?", "What colors are dandelions?", "How many holes are there on a standard golf course?", "test"];
+  var a1 =["pick1", "Peter Piper", "Peter Parker", "pick4"];
+  var c ="here is the correct answer";
+
+  // {q:"What colors are dandelions?",
+  // a:["White", "Brown", "Pink", "Yellow"],
+  // c:"White"},
+
+  // {q:"How many holes are there on a standard golf course?",
+  // a:["13", "20", "16", "18"],
+  // c:"18"}];
+
+    //Create answer buttons
+  function renderAnswers() {
+    for (let w = 0; w < a1.length; w++) {
+      const emlement= a1.length;
+    $("#answerboxes").append(a1[w]);
+    }}
   
-  $("#game-content").hide();
-  console.log("this is a test");
+  function showQuestions() {
+    $("#questions1").append(questions[0]);
+    $("#questions2").append(questions[1]);
+    $("#questions3").append(questions[2]);
+    $("#questions4").append(questions[3]);
+    console.log("test " + questions[1]);
+  }  
 
   $("#start-game-btn").on("click", run);
-  $("#stop").on("click", stop);
 
   function run() {
     $("#game-content").show();
     $("#open-message").hide();
-  }
+    renderAnswers();
+    showQuestions();
+    console.log("this is a test");
+    }
   
 })
-    // questions =[{q:"Who picked a peck of pickled pepper?",
-    // a:["pick1", "Peter Piper", "Peter Parker", "pick4"],
-    // c:"here is the correct answer"},
 
-    // {q:"What colors are dandelions?",
-    // a:["White", "Brown", "Pink", "Yellow"],
-    // c:"White"},
 
-    // {q:"How many holes are there on a standard golf course?",
-    // a:["13", "20", "16", "18"],
-    // c:"18"}];
-    
-    
-    // for(var i=0; i<questions.length;i++){
+      
+// $("#stop").on("click", stop);
+// for(var i=0; i<questions.length;i++){
 
     //   var wrap = $("<div>")
 
@@ -82,4 +101,4 @@ $(document).ready(function(){
     //       if (number === 0) {
     //         stop();
     //         alert("Time Up!");
-    //       }
+    //       
