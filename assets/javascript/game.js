@@ -21,9 +21,9 @@ $("#result-wrapper").hide();
 $("#start-game-btn").on("click", run);
 console.log("this is a test");
 
-  var questions =["Who picked a peck of pickled pepper?", "What colors are dandelions?", "How many holes are there on a standard golf course?", "test"];
-  var a1 =["pick1", "Peter Piper", "Peter Parker", "pick4"];
-  var c ="here is the correct answer";
+var questions =["Who picked a peck of pickled pepper?", "What colors are dandelions?", "How many holes are there on a standard golf course?", "test"];
+var a1 =["pick1", "Peter Piper", "Peter Parker", "pick4"];
+var c ="here is the correct answer";
 
   // {q:"What colors are dandelions?",
   // a:["White", "Brown", "Pink", "Yellow"],
@@ -48,19 +48,31 @@ console.log("this is a test");
     console.log("test " + questions[1]);
   }  
 
-
-
   function run() {
     $("#game-content").show();
     $("#open-message").hide();
     renderAnswers();
     showQuestions();
+    timer();
     console.log("this is a test");
     }
   
 })
 
-
+var number =30;
+  function timer() {
+        intervalId = setInterval(decrement, 1000);
+      function decrement() {
+        number--;
+        console.log("test for timer" + number);
+    $("#timeclock").html("<h2>" + number + "</h2>");}
+      }
+        
+    if (number === 0) {
+          stop();
+          alert("Time Up!");
+        }
+      
       
 // $("#stop").on("click", stop);
 // for(var i=0; i<questions.length;i++){
