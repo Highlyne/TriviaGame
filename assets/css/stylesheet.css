@@ -59,3 +59,14 @@ h1 {
     border: 1px solid #b81feb;
     margin: 5px;
 }
+
+#result-wrapper {
+    width: 995px;
+    float: left;
+    margin: 0 auto;
+    padding: 10px;
+    background: rgb(234, 59, 240);
+    border-radius: 10px;
+    border: 1px solid #ebebeb;
+    margin: 5px;
+}
