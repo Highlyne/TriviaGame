@@ -1,15 +1,12 @@
-// Once again I started out with high hopes for my homework.  I thought I understood
-// and had a game plan for game.  But now I have am having trouble sortting our my javascript page.
-// I am usure about the placement of all of the information that belongs on the page.
-// I get that variables should be placed at the top of the page and then the functions.
-// But I don't fully understand the order of the functions.  Ie: is the run function placed on the page first,
-// then the stop function?  Where does the timer fall in place?  Also, what all should be included in the run func.?
-//I think it needs to have, start my timer, display my questions & answers.  So does that mean the timer and the display
-// questions and answer functions should be defined below the start function?
-// All do I use .append or docuent.querySelector to target a div element to make the Qs& As display?
-// Finally, I don't know how to connect the check box the user selects with the correct answer so that I can use
-// a if/else statement to show the answer is correct or wrong.  This week feels like another epic fail.
-
+//I used the added time to work on getting my start
+//game button to work and switch to the questions & answers
+//I have my time clock running... but it doesn't stop.
+//I need to find a way to display the answer choices and 
+// mark the correct answer so that when the user clicks on
+// the correct checkbox the computer will know to alert them
+// how many questions are correct and how many are wrong.
+// I also need to get the reset button to clear all the variables and 
+// start the time clock again.
 
 
 
@@ -59,7 +56,7 @@ var c ="here is the correct answer";
   
 })
 
-var number =30;
+var number =10;
   function timer() {
         intervalId = setInterval(decrement, 1000);
       function decrement() {
@@ -68,6 +65,10 @@ var number =30;
     $("#timeclock").html("<h2>" + number + "</h2>");}
       }
         
+  function stop() {
+    clearInterval(intervalId);
+    }
+
     if (number === 0) {
           stop();
           alert("Time Up!");
@@ -86,33 +87,3 @@ var number =30;
     // function stop() {
     //   clearInterval(intervalId);
     // }
-
-
-    // var number = 30;
-    //     //  Variable that will hold our interval ID when the run function is executed
-    //     var intervalId;
-
-    //    
-    //     
-    
-    //     //  The run function sets an interval that runs a decrement function every second
-    //     
-    //       document.querySelector('#questions1').innerHTML = questions[0].q;
-    //       document.querySelector('#anw1').innerHTML = questions[0].a[0];
-    //       document.querySelector('#anw2').innerHTML = questions[0].a[1];
-    //       document.querySelector('#anw3').innerHTML = questions[0].a[2];
-    //       document.querySelector('#anw4').innerHTML = questions[0].a[3];
-    //       console.log("looking for questions");
-    //     }
-        
-    //     function time() {
-    //       intervalId = setInterval(decrement, 1000);
-    //     function decrement() {
-    //       number--;
-    //     };
-    //       //  Show the countdow of the timer created by the run function
-    //       $("#timeclock").html("<h2>" + number + "</h2>");
-    //       if (number === 0) {
-    //         stop();
-    //         alert("Time Up!");
-    //       
