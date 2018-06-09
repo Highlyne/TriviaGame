@@ -1,5 +1,5 @@
-
-
+var xhttp = new XMLHttpRequest();
+var url = https://opentdb.com/api.php?amount=10&category=14&difficulty=easy&type=multiple;
 $(document).ready(function () {
 
   $("#game-content").hide();
@@ -10,6 +10,9 @@ $(document).ready(function () {
 
 function game() {
 // Make a call to the API to retrieve all of the quiz data
+
+  xhttp.open("GET", "demo_get.asp", true);
+  xhttp.send();
 
 // Use the quiz data to load the question area and the answer area
 
